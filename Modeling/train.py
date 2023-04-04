@@ -26,8 +26,6 @@ def main(args):
     start, je_model, params, optimizer, best_val_loss = startExperiment(args, exp_path)
 
     filts = 'impression'
-    if args.findings_transformer:
-        filts = ''
 
     if exists(exp_path + '/filters.txt'):
         filters = MedDataHelpers.getFilters(exp_path)
